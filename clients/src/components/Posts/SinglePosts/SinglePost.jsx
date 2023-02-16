@@ -154,8 +154,6 @@ const SinglePost = (props) => {
             <Comment
               key={`${_id}- ${i}`}
               commentData={commentData}
-              // all comments of the post
-              allComments={comments}
               // postUserId
               postUserId={postUserId}
             />

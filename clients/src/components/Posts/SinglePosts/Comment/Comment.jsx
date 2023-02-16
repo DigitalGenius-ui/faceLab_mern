@@ -7,19 +7,16 @@ import { commentLike, removeComment } from "../../../../fetchHook/postFetch";
 import moment from "moment";
 import { FaceLab } from "../../../../context/Context";
 
-const Comment = ({
-  commentData,
-  allComments,
-  setComment,
-  comment,
-  postUserId,
-}) => {
-  const { isAuth } = FaceLab();
+const Comment = ({ commentData, setComment, comment, postUserId }) => {
+  const { isAuth, postUsers } = FaceLab();
   const { _id: authId } = isAuth;
-  const { userImg, username, userId, createdAt, commentText, _id, likes } =
-    commentData;
+  const { userId, createdAt, commentText, _id, likes } = commentData;
+
   const [likeComment, setLikeComment] = useState(likes.length);
   const [isCommentLiked, setIsCommentLiked] = useState(likes.includes(authId));
+
+  const commentedUser = postUsers?.find((user) => user._id === userId);
+  console.log(commentedUser);
 
   const folder = process.env.React_App_PF;
 
@@ -54,13 +51,17 @@ const Comment = ({
     <div className="comments">
       <div className="comment">
         <img
-          src={userImg ? folder + userImg : folder + "static/profile.png"}
+          src={
+            commentedUser.userImg
+              ? folder + commentedUser?.userImg
+              : folder + "static/profile.png"
+          }
           alt="userIMage"
         />
 
         <div className="comment_body">
           <h1 style={{ textTransform: "capitalize" }}>
-            {username}
+            {commentedUser?.username}
             <span style={{ textTransform: "lowerCase" }}>
               {moment(createdAt).fromNow()}
             </span>
