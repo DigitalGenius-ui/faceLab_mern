@@ -1,0 +1,246 @@
+.post{
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 0px 1px 0.3px rgb(112, 112, 112, );
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+
+    @media(max-width:700px){
+        padding: 1rem;
+    }
+
+    .post_head{
+        display: flex;
+        gap: 1rem;
+        position: relative;
+        
+        .post_user{
+            cursor: pointer;
+            img{
+                width: 3rem;
+                border-radius: 5px;
+            }
+        }
+
+        .user_details{
+            flex: 1;
+            display: flex;
+            gap: 1.8rem;
+
+            .detail{
+                h1{
+                    font-size: 1rem;
+                }
+
+                .time{
+                    display: flex;
+                    align-items: center;
+                    gap: 0.2rem;
+                    padding-top: 0.2rem;
+                    font-size: 0.6rem;
+                    font-weight: 500;
+                    color: grey;
+
+                    .icon{
+                        font-size: 1rem;
+                    }
+                }
+            }
+
+            .follow{
+                font-size: 0.8rem;
+                color: grey;
+                font-weight: 500;
+                margin-top: 0.15rem;
+                cursor: pointer;
+
+                &:hover{
+                    opacity: 0.6;
+                }
+            }
+        }
+
+        .dot{
+            width: 1.6rem;
+            height: 1.6rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            &:hover{
+                background-color: rgb(189, 189, 189);
+                border-radius: 50px;
+                transition: 200ms ease-in-out;
+            }
+        }
+
+        .user_features{
+            background-color: #fff;
+            border-radius: 5px;
+            position: absolute;
+            top: 1.4rem;
+            right: 0;
+            padding: 0.5rem;
+            z-index: 100000;
+            box-shadow: 0px 0px 6px 1px rgb(176, 176, 176);
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+           .user_btn{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+
+            &:hover{
+                background-color: rgb(210, 210, 210);
+                color: rgb(38, 37, 37);
+            }
+
+            .icon{
+                font-size: 1.2rem;
+            }
+           }
+        }
+    }
+
+    .user_text{
+        .post_text{
+            font-size: 0.85rem;
+            padding: 0.8rem 0;
+            line-height: 1.3rem;   
+        }
+
+        button{
+            background-color: transparent;
+            color: rgb(16, 16, 167);
+            border: none;
+            cursor: pointer;
+        }
+
+    }
+    .post_image{
+        width: 100%;
+        img{
+            width: 100%;
+        }
+    }
+
+    .total_reaction{
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        padding: 1rem 0;
+
+        .flex{
+            flex: 1;
+        }
+
+        .reaction{
+            display: flex;
+            align-items: center;
+            gap: 0.2rem;
+
+            p{
+                font-weight: 600;
+                font-size: 0.8rem;
+
+                span{
+                    color: gray;
+                    font-weight: 500;
+                    font-size: 0.7rem;
+                }
+            }
+        }
+
+        .icon{
+            font-size: 1rem;
+        }
+    }
+
+    .reaction_btns{
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        .flex{
+            flex: 1;
+        }
+
+        .button{
+            button{
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                border: none;
+                background-color: transparent;
+                cursor: pointer;
+                box-shadow: 0px 0px 2px 1px rgb(184, 184, 184);
+                padding: 0.4rem 1rem;
+                border-radius: 50px;
+                font-size: 0.8rem;
+                color: rgb(76, 75, 75);
+
+                @media(max-width:400px) {
+                    font-size: 0.7rem;
+                }
+
+                .icon{
+                    font-size: 1.2rem;
+                    @media(max-width:400px) {
+                        font-size: 1rem;
+                    }
+                }
+
+                &:hover{
+                    background-color: rgba(160, 160, 160, 0.438);
+                    box-shadow: none;
+                    color: #000;
+                    transition: 200ms ease-in-out;
+                }
+
+                &.active{
+                    background-color: rgba(160, 160, 160, 0.438);
+                    box-shadow: none;
+                    color: #000;
+                    transition: 200ms ease-in-out;
+                }
+            }
+        }
+        
+    }
+
+    .input{
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        margin-top: 1rem;
+
+        button{
+            padding: 0.5rem 0.7rem 0.3rem 0.7rem;
+            border: none;
+            background-color: rgb(91, 91, 91);
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+
+            &:hover{
+                opacity: 0.7;
+            }
+
+            .icon{
+                font-size: 1.3rem;
+            }
+        }
+    }
+
+    .comments{
+        margin-top: 0.5rem;
+    }
+}

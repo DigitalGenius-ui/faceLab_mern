@@ -1,0 +1,70 @@
+.home{
+    width: 85%;
+    max-width: 1280px;
+    margin: 1rem auto;
+    display: flex;
+    gap: 1rem;
+
+    @media(max-width:1010px){
+        width: 95%;
+    }
+
+    @media(max-width:700px) {
+        flex-direction: column;
+    }
+
+    .left, .right{
+        flex: 1;
+    }
+
+    .right{
+        @media(max-width:900px) {
+            position: fixed;
+            bottom: 0;
+            right: 1rem;
+            width: 16rem;
+            transform: translateY(100%);
+            transition: all 400ms ease-in-out;
+        }
+
+        @media(max-width:700px) {
+            bottom: 65px;
+        }
+
+        &.active{
+            transform: translateY(0);
+        }
+    }
+    
+    .center{
+        flex: 2.5;
+    }
+
+    .messageIcon{
+        display: none;
+        @media(max-width:900px){
+            display: block;
+            position: fixed;
+            top: 50%;
+            right: 1rem;
+            background-color: rgb(236, 151, 52);
+            color: #fff;
+            width: 3rem;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50px;
+        }
+
+        @media(max-width:700px) {
+            top: 40%;
+        }
+
+        .icon{
+            @media(max-width:900px) {
+                font-size: 2rem;
+            }
+        }
+    }
+}

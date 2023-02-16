@@ -1,0 +1,39 @@
+.details_form{
+    width: 85%;
+    max-width: 1280px;
+    margin: 2rem auto;
+
+    .form{
+       width: 50rem;
+       margin: 0 auto; 
+
+       .title{
+        text-align: center;
+        padding: 0.5rem 0 1rem 0;
+       }
+
+       .inputs{
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+       }
+
+       .files{
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+
+        label{
+            font-size: 0.9rem;
+            color: rgb(63, 63, 63);
+        }
+       }
+
+       .edit_button{
+        text-align: right;
+        margin-top: 1rem;
+       }
+    }
+}

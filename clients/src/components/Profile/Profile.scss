@@ -1,0 +1,83 @@
+.container{
+    .user__profile{
+        position: relative;
+        padding-bottom: 1.4rem;
+        background-color: #fff;
+        border-radius: 4px;
+        overflow: hidden;
+        box-shadow: 0px 0px 1px 0.3px rgb(112, 112,112);
+
+        .banner{
+            width: 100%;
+
+            img{
+                width: 100%;
+            }
+        }
+
+        .user__image{
+            position: relative;
+            img {
+                width: 4.5rem;
+                height: 4.5rem;
+                object-fit: cover;
+                position: absolute;
+                top: 55%;
+                left: 50%;
+                transform: translate(-50%, -56%);
+                border: 3px solid rgb(236, 151, 52);
+                box-shadow: 0px 0px 4px 0.3px rgba(0,0,0,0.644);
+                border-radius: 50px;
+
+                @media(max-width : 1010px){
+                    width: 4rem;
+                    height: 4rem;
+                    top: 50%;
+                }
+
+                @media(max-width : 700px){
+                    width: 7rem;
+                    height: 7rem;
+                    object-fit: cover;
+                    transform: translate(-50%, -70%);
+                }
+            }
+        }
+
+        .user__details{
+            padding-top: 3rem;
+            text-align: center;
+
+            h1{
+                font-size: 1rem;
+                letter-spacing: 0.5px;
+                text-transform: capitalize;
+            }
+
+            p{
+                font-size: 0.7rem;
+                padding-top: 0.3rem;
+                color: rgba(0,0,0,0.600);
+            }
+        }
+    }
+
+    .navBar{
+        background-color: #fff;
+        border-radius: 4px;
+        box-shadow: 0px 0px 1px 0.3px rgb(112, 112, 112);
+        margin-top: 1rem;
+
+        @media(max-width:700px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 0.5rem 0;
+            z-index: 1000000;
+        }
+    }
+}

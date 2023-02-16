@@ -1,0 +1,20 @@
+.filter_btn{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.5rem;
+    padding: 0.8rem 0;
+
+    .btn{
+        background-color: transparent;
+        padding: 0.4rem 0.8rem;
+
+        .icon{
+            font-size: 1.3rem;
+        }
+
+        p{
+            font-size: 0.9rem;
+        }
+    }
+}

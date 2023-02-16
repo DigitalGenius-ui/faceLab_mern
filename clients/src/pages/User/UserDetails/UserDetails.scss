@@ -1,0 +1,78 @@
+.user_details{
+
+    .details_head{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.5rem 0 1.5rem 0;
+
+        h1{
+            font-size: 1rem;
+            @media(max-width : 1060px) {
+                font-size: 0.8rem;
+            }
+        }
+
+        .icon{
+            font-size: 1rem;
+            cursor: pointer;
+            color: rgb(238, 132, 11);;
+
+            &:hover{
+                opacity: 0.5;
+            }
+        }
+    }
+
+    .details_body{
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+
+        .info{
+            display: flex;
+            align-items: center;
+            gap: 0.2rem;
+
+            @media(max-width : 1060px) {
+                gap: 0.7;
+            }
+
+            h1{
+                font-size: 1rem;
+                text-transform: capitalize;
+
+                @media(max-width : 1060px) {
+                    font-size: 0.8rem;
+                }
+            }
+            
+            span{
+                font-size: 0.9rem;
+                text-transform: capitalize;
+
+                @media(max-width : 1060px) {
+                    font-size: 0.7rem;
+                }
+            }
+        }
+    }
+
+    .user_btn{
+        text-align: right;
+
+        button{
+            cursor: pointer;
+            margin-top: 3rem;
+            padding: 0.5rem 1.4rem;
+            background-color: rgb(236, 151, 52);
+            border: none;
+            color: #fff;
+            border-radius: 4px;
+
+            &:hover{
+                background-color: rgb(238, 132, 11);
+            }
+        }
+    }
+}

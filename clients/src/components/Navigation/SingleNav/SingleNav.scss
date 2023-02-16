@@ -1,0 +1,61 @@
+.navigation{
+    padding: 0.7rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1;
+
+    .nav{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        cursor: pointer;
+        position: relative;
+
+        @media(max-width:700px) {
+            gap: 0.5rem;;
+        }
+
+        &:hover{
+            color: rgb(236, 151, 52);
+        }
+
+        span{
+            font-size: 0.5rem;
+        }
+
+        p{
+            font-size: 0.8rem;
+            @media(max-width:700px) {
+                display: none;
+            }
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: -1.18rem;
+            top: 0;
+            bottom: 0;
+            border: 2px solid rgb(236, 151, 52);
+            display: none;
+        }
+
+        &:hover::before{
+            display: block;
+        }
+
+        &.active{
+         color: rgb(236, 151, 52);;   
+        }
+
+        &.active::before{
+            content: "";
+            position: absolute;
+            left: -1.18rem;
+            top: 0;
+            bottom: 0;
+            border: 2px solid rgb(236, 151, 52);
+            display: block;
+        }
+    }
+}
