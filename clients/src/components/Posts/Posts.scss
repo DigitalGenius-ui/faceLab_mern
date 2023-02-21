@@ -3,12 +3,14 @@
     overflow-y: scroll;
     scrollbar-width: none;
     border-radius: 5px;
+    padding: 0.1rem;
 
     @media(max-width:700px) {
         margin-bottom: 65px;
     }
 
-    ::-webkit-scrollbar {
-        display: none;
-    }
+}
+
+::-webkit-scrollbar {
+    display: none;
 }

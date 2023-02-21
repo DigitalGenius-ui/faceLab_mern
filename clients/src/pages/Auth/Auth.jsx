@@ -32,8 +32,6 @@ const Auth = () => {
     }
   };
 
-  console.log(authChange);
-
   return (
     <div className="auth_container">
       <div className="contents">

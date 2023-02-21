@@ -11,7 +11,7 @@ const UserDetails = () => {
 
   const updatePage = (data) => {
     setUpdateProfile(data);
-    navigate(`/${data._id}/form`);
+    navigate(`/${data?._id}/form`);
   };
 
   const logOut = () => {
@@ -23,7 +23,7 @@ const UserDetails = () => {
     <div className="user_details white_bg">
       <div className="details_head">
         <h1>User Info</h1>
-        {authName === data.username && (
+        {authName === data?.username && (
           <span className="icon" onClick={() => updatePage(data)}>
             <ModeEditOutlinedIcon />
           </span>
@@ -33,22 +33,22 @@ const UserDetails = () => {
       <div className="details_body">
         <div className="info">
           <h1>born : </h1>
-          <span>{data.born}</span>
+          <span>{data?.born}</span>
         </div>
         <div className="info">
           <h1>Status </h1>
-          <span>{data.status}</span>
+          <span>{data?.status}</span>
         </div>
         <div className="info">
           <h1>live </h1>
-          <span>{data.location}</span>
+          <span>{data?.location}</span>
         </div>
         <div className="info">
           <h1>works at </h1>
-          <span>{data.work}</span>
+          <span>{data?.work}</span>
         </div>
       </div>
-      {authName === data.username && (
+      {authName === data?.username && (
         <div className="user_btn">
           <button onClick={logOut}>LogOut</button>
         </div>

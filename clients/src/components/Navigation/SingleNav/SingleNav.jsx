@@ -1,23 +1,27 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./SingleNav.scss";
 
-const SingleNav = ({ icon, path, name, selected, setSelected }) => {
+const SingleNav = ({ icon, path, name, profile }) => {
+  const [selected, setSelected] = useState("/");
   const navigate = useNavigate();
+
   const handleClick = () => {
-    setSelected(name);
+    setSelected(path);
     navigate(path);
     window.location.reload();
-  }
+  };
   return (
-      <div className='navigation'>
-          <div
-          onClick={handleClick} className={`nav ${selected === name ? "active" : ""}`}>
-              <span>{icon}</span>
-              <p>{name }</p>
-          </div>
+    <div className="navigation">
+      <div
+        onClick={handleClick}
+        className={`nav ${selected === path ? "active" : ""}`}
+      >
+        <span>{icon}</span>
+        <p>{name}</p>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default SingleNav
+export default SingleNav;

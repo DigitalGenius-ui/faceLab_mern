@@ -5,7 +5,7 @@
         background-color: #fff;
         border-radius: 4px;
         overflow: hidden;
-        box-shadow: 0px 0px 1px 0.3px rgb(112, 112,112);
+        box-shadow: 0px 0px 2px 0.5px rgba(0, 0, 0, 0.20);
 
         .banner{
             width: 100%;
@@ -59,25 +59,6 @@
                 padding-top: 0.3rem;
                 color: rgba(0,0,0,0.600);
             }
-        }
-    }
-
-    .navBar{
-        background-color: #fff;
-        border-radius: 4px;
-        box-shadow: 0px 0px 1px 0.3px rgb(112, 112, 112);
-        margin-top: 1rem;
-
-        @media(max-width:700px) {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 0.5rem 0;
-            z-index: 1000000;
         }
     }
 }

@@ -5,9 +5,25 @@ import User from "./pages/User/User";
 import Auth from "./pages/Auth/Auth";
 import { FaceLab } from "./context/Context";
 import DetailsForm from "./pages/User/UserDetails/DetailsForm/DetailsForm";
+import axios from "axios";
+import { useEffect } from "react";
 
 function App() {
   const { isAuth } = FaceLab();
+  const API = axios.create({ baseURL: "http://localhost:5000" });
+
+  useEffect(() => {
+    API.interceptors.request.use((req) => {
+      if (localStorage.getItem("user")) {
+        req.headers.authorization = `Bearer ${
+          JSON.pars(localStorage.getItem("user")).accessToken
+        }`;
+      }
+      console.log(req);
+      return req;
+    });
+  }, [API.interceptors.request]);
+
   return (
     <div className="App">
       {isAuth && <Header />}

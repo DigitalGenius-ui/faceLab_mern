@@ -10,6 +10,10 @@ const postSchema = mongoose.Schema(
       type: String,
       default: "",
     },
+    creator: {
+      type: String,
+      default: "",
+    },
     description: {
       type: String,
       required: true,

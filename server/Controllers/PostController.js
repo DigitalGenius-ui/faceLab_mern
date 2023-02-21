@@ -31,7 +31,7 @@ export const getSinglePosts = async (req, res) => {
 // create new post
 export const createPost = async (req, res) => {
   const post = req.body;
-  const newPosts = new Post(post);
+  const newPosts = new Post({ ...post });
   try {
     const newPost = await newPosts.save();
     res.status(200).json(newPost);
@@ -66,6 +66,8 @@ export const deletePost = async (req, res) => {
 export const likeDislike = async (req, res) => {
   const id = req.params.id;
   const userId = req.body.userId;
+
+  console.log(req.authId);
   try {
     const post = await Post.findById(id);
     if (post.likes.includes(userId)) {

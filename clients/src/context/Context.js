@@ -47,7 +47,7 @@ const Context = ({ children }) => {
   const location = useLocation();
   const id = location.pathname.split("/")[1];
   const { data, isLoading, isError } = useQuery("singleUser", () =>
-    fetchSingleUser(id)
+    isAuth && fetchSingleUser(id)
   );
 
   // update profile data

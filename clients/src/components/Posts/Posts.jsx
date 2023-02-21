@@ -9,7 +9,9 @@ const Posts = () => {
   if (isLoading) return "Loading...";
   if (isError) return "something went wrong";
 
-  const sortData = data?.sort((a, b) => a.createdAt < b.createdAt);
+  const sortData = data?.sort(
+    (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
+  );
   return (
     <div className="posts">
       {data && sortData?.map((post, i) => <SinglePost data={post} key={i} />)}

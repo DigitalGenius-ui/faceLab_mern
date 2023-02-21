@@ -29,6 +29,9 @@
 
         .posts{
             margin-top: 0.5rem;
+            @media(max-width:700px) {
+                    margin-bottom: 0;
+                }
         }
     }
 }

@@ -1,34 +1,36 @@
 import React from "react";
 import "./UserFriends.scss";
+import { useQuery } from "react-query";
+import { getFriends } from "../../../fetchHook/userFetch";
+const UserFriends = ({ data: user }) => {
+  const PF = process.env.React_App_PF;
 
-const UserFriends = () => {
-  const userFriends = [
-    {
-      name: "John Doe",
-      username: "john1233444",
-      img: "https://t4.ftcdn.net/jpg/02/90/27/39/360_F_290273933_ukYZjDv8nqgpOBcBUo5CQyFcxAzYlZRW.jpg",
-    },
-    {
-      name: "John Doe",
-      username: "john1233444",
-      img: "https://t4.ftcdn.net/jpg/02/90/27/39/360_F_290273933_ukYZjDv8nqgpOBcBUo5CQyFcxAzYlZRW.jpg",
-    },
-    {
-      name: "John Doe",
-      username: "john1233444",
-      img: "https://t4.ftcdn.net/jpg/02/90/27/39/360_F_290273933_ukYZjDv8nqgpOBcBUo5CQyFcxAzYlZRW.jpg",
-    },
-  ];
+  const {
+    data: userFriends,
+    isLoading,
+    isError,
+  } = useQuery("friends", () => getFriends(user._id));
+
+  if (isLoading) return "Loading...";
+  if (isError) return "Something went Wrong";
+
   return (
     <div className="user_friends white_bg">
       <h1>Who is following you :</h1>
-      {userFriends.map((friend, i) => (
+      {userFriends?.map((friend, i) => (
         <div className="friend" key={i}>
           <div className="friend_info">
-            <img src={friend.img} alt="friendsImg" />
+            <img
+              src={
+                friend.userImg
+                  ? PF + friend.userImg
+                  : PF + "/static/profile.png"
+              }
+              alt="friendsImg"
+            />
             <div>
-              <h1>{friend.name}</h1>
-              <span>@{friend.username}</span>
+              <h1>{friend.username}</h1>
+              <span>@username</span>
             </div>
           </div>
           <button className="user_button">follow</button>

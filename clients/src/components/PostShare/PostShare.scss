@@ -1,7 +1,7 @@
 .share_post {
     background-color: #fff;
     border-radius: 4px;
-    box-shadow: 0px 0px 1px 0.3px rgb(112, 112, 112);
+    box-shadow: 0px 0px 2px 0.5px rgba(0, 0, 0, 0.20);
     padding: 2rem;
 
     @media(max-width:700px) {
@@ -37,6 +37,7 @@
 
     .post_right {
         flex: 1;
+        position: relative;
 
         textarea {
             width: 100%;
@@ -44,6 +45,23 @@
             outline: none;
             resize: none;
             font-size: 0.8rem;
+        }
+
+        .emoji_btn{
+            display: block;
+            width: 100%;
+            text-align: right;
+            opacity: 0.5;
+            cursor: pointer;
+             :hover{
+                opacity: 0.4;
+             }
+        }
+        
+        .emoji{
+           position: absolute;
+           z-index: 10000;
+           left: 0;
         }
     }
 

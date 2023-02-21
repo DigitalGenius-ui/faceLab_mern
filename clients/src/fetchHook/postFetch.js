@@ -1,11 +1,11 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:5000/";
+const BASE_URL = "http://localhost:5000";
 
 // get all posts
 export const fetchPost = async (search) => {
   try {
-    const res = await axios.get(BASE_URL + `api/post/${search}`);
+    const res = await axios.get(BASE_URL + `/api/post/${search}`);
     return res.data;
   } catch (error) {
     console.log(error);
@@ -22,14 +22,14 @@ export const createPost = async (data) => {
     data.formData.postImg = imageName;
 
     try {
-      await axios.post(BASE_URL + "api/upload", form);
+      await axios.post(BASE_URL + "/api/upload", form);
     } catch (error) {
       console.log(error);
     }
   }
 
   try {
-    await axios.post(BASE_URL + "api/post/create", data.formData);
+    await axios.post(BASE_URL + "/api/post/create", data.formData);
   } catch (error) {
     console.log(error);
   }
@@ -38,7 +38,7 @@ export const createPost = async (data) => {
 // delete post
 export const removePost = async (id) => {
   try {
-    await axios.delete(`${BASE_URL}api/post/delete/${id}`);
+    await axios.delete(`${BASE_URL}/api/post/delete/${id}`);
   } catch (error) {
     console.log(error);
   }
@@ -47,7 +47,7 @@ export const removePost = async (id) => {
 // like and disLike post
 export const likeDislike = async (id, userId) => {
   try {
-    await axios.put(`${BASE_URL}api/post/${id}/like`, { userId });
+    await axios.put(`${BASE_URL}/api/post/${id}/like`, { userId });
   } catch (error) {
     console.log(error);
   }
@@ -56,7 +56,7 @@ export const likeDislike = async (id, userId) => {
 // comment in post
 export const commentPost = async (data) => {
   try {
-    await axios.post(`${BASE_URL}api/comment/${data._id}`, data.comment);
+    await axios.post(`${BASE_URL}/api/comment/${data._id}`, data.comment);
   } catch (error) {
     console.log(error);
   }
@@ -65,7 +65,7 @@ export const commentPost = async (data) => {
 // delete comment
 export const removeComment = async (_id) => {
   try {
-    await axios.delete(`${BASE_URL}api/comment/remove/${_id}`);
+    await axios.delete(`${BASE_URL}/api/comment/remove/${_id}`);
   } catch (error) {
     console.log(error.message);
   }
@@ -74,7 +74,7 @@ export const removeComment = async (_id) => {
 // like and disLike comment
 export const commentLike = async (_id, userId) => {
   try {
-    await axios.put(`${BASE_URL}api/comment/like/${_id}`, { userId });
+    await axios.put(`${BASE_URL}/api/comment/like/${_id}`, { userId });
   } catch (error) {
     console.log(error.message);
   }

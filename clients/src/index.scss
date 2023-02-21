@@ -29,3 +29,22 @@ body{
 .orang{
   color: rgb(236, 151, 52);
 }
+
+.navBar {
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 0px 2px 0.5px rgba(0, 0, 0, 0.20);
+  margin-top: 1rem;
+
+  @media(max-width:700px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.5rem 0;
+    z-index: 1000000;
+  }
+}

@@ -40,12 +40,12 @@ const Profile = () => {
 
       <div className="activities">
         <div className="activity">
-          <h1>{data?.follows.length}</h1>
+          <h1>{data?.follows && data?.follows.length}</h1>
           <p>Followings</p>
         </div>
 
         <div className="activity">
-          <h1>{data?.followers.length}</h1>
+          <h1>{data?.followers && data?.followers.length}</h1>
           <p>Followers</p>
         </div>
         <div className="activity">

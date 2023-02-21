@@ -12,9 +12,10 @@ const Home = () => {
         <div className="left"><Profile/></div>
         <div className="center"><Feed/></div>
         <div className={`right ${openMessage ? "active" : ""}`}><Chat /></div>
-      <span onClick={() => setOpenMessage(!openMessage)} className="messageIcon">
-        <MarkunreadIcon className='icon' />
-      </span>
+      
+        <span onClick={() => setOpenMessage(!openMessage)} className="messageIcon">
+          <MarkunreadIcon className='icon' />
+        </span>
     </section>
   )
 }

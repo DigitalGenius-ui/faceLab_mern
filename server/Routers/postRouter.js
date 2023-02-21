@@ -28,5 +28,4 @@ router.delete("/delete/:id", deletePost);
 // like and dislike post
 router.put("/:id/like", likeDislike);
 
-
 export default router;
