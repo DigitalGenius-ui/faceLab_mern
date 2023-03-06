@@ -1,4 +1,4 @@
-## FaceLab Full Statck Application using MERN Stack.
+## FaceLab Full Stack Application using MERN Stack.
 
 <img src="https://res.cloudinary.com/ghazni/image/upload/v1678070795/Screenshot_2023-03-06_at_10-44-23_Facelab_k5bjpz.png" alt="banner"/>
 
