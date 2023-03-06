@@ -1,5 +1,6 @@
 ## FaceLab Full Statck Application using MERN Stack.
-<img sr="https://res.cloudinary.com/ghazni/image/upload/v1678070795/Screenshot_2023-03-06_at_10-44-23_Facelab_k5bjpz.png" alt="banner"/>
+
+<img sr="[https://res.cloudinary.com/ghazni/image/upload/v1678070795/Screenshot_2023-03-06_at_10-44-23_Facelab_k5bjpz.png](https://res.cloudinary.com/ghazni/image/upload/v1678070795/Screenshot_2023-03-06_at_10-44-23_Facelab_k5bjpz.png)" alt="banner"/>
 
 ## Demo
 
